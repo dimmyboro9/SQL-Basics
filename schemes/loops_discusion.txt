@@ -1,0 +1,7 @@
+There are some loops in the scheme. List of loops below including explanation of possible problems.
+
+The loop Season-League-Club-Team-Season: this is a loop, where the league has a season in which a team that belongs to a club, that is in the league, plays during that season. This is correct, because season, that was holded by league, that have clubs, that has teams exists only if these plays games during this season.
+
+The loop Person-Contract-League-Club-Contract-Person: this is a loop, where a person has contract with the league ( it means he has contract with a type comissioner or employee ( IO6 )), that has club, that has contract with this person as a player. That's okay too. In our database one person can be a player and a comissioner during different seasons.
+
+Logically, these are the problems mentioned above, which have been explained, or IO has been added to the scheme.
