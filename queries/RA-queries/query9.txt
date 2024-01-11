@@ -1,0 +1,8 @@
+Write out the names of the clubs that set records and the names of these records.
+
+Categories:
+A - Positive query on at least two joined tables
+F2 - NATURAL JOIN|JOIN USING
+
+RA:
+{record[record.id_club=club.id_club]club}[club.name→club_name, record.name→record_name]

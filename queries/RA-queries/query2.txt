@@ -1,0 +1,12 @@
+Write out all information about players, who had the contract with club "Real Stockholm" during season 2023, and their stats.
+
+Categories:
+A - Positive query on at least two joined tables
+F1 - JOIN ON
+F2 - NATURAL JOIN|JOIN USING
+
+RA:
+stats_n_season:= stats<stats.id_season=season.id_season]season(year='2023')
+contract_n_club := contract<contract.id_club=club.id_club]club(name='Real Stockholm')
+stats_n_contract := stats_n_season<stats_n_season.id_person=contract_n_club.id_person ∧ stats_n_season.id_season=contract_n_club.id_season]contract_n_club
+stats_n_contract [stats_n_contract.id_person=person.id_person]person

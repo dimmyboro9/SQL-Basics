@@ -1,0 +1,7 @@
+Write out the city where Batz LLC Stadium is located.
+
+Categories:
+A - Positive query on at least two joined tables
+
+RA:
+{stadium(name='Batz LLC Stadium')[stadium.id_stadium=location.id_stadium]location}[city]

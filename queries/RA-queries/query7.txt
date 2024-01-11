@@ -1,0 +1,12 @@
+Choose all the players who played for the team "Strahov Dinosaurs" and had a salary of over 800000 (not necessarily in the same season).
+
+Categories:
+A - Positive query on at least two joined tables
+F2 - NATURAL JOIN|JOIN USING
+H3 - Set intersection - INTERSECT
+
+RA:
+c_cl:= contract[contract.id_club=club.id_club]club(name='Strahov Dinosaurs')
+p1:= person <person.id_person=c_cl.id_person]c_cl
+p2:= person <person.id_person=contract.id_person]contract(salary > 8000000)
+p1 ∩ p2

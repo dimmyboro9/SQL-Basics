@@ -1,0 +1,11 @@
+Choose people, who have all their contracts only with club "DBS Portal" and any other.
+
+Categories:
+C - Select only those related to...
+F2 - NATURAL JOIN|JOIN USING
+H2 - Set difference - MINUS or EXCEPT
+
+RA:
+{person<person.id_person=contract.id_person]{contract<contract.id_club=club.id_club]club(name='DBS Portal')}}
+\
+{person<person.id_person=contract.id_person]{contract<contract.id_club=club.id_club]club(name!='DBS Portal')}}

@@ -1,0 +1,11 @@
+Write out all the years in which "London Alligators" participated and the places it took.
+
+Categories:
+A - Positive query on at least two joined tables
+F2 - NATURAL JOIN|JOIN USING
+G1 - Nested query in WHERE clause
+G4 - Correlated nested query (EXISTS|NOT EXISTS)    
+
+RA:
+t_c := club(name='London Alligators')[club.id_club=team.id_club>team
+{t_c[t_c.id_season=season.id_season]season}[year,place]

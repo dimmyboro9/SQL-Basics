@@ -1,0 +1,7 @@
+Choose people who have never had a contract with any club or league.
+
+Categories:
+B - Negative query on at least two joined tables
+
+RA:
+person!<person.id_person=contract.id_person]contract

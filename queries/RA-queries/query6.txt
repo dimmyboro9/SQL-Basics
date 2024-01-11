@@ -1,0 +1,13 @@
+Choose all players with more than 14 points per game in the 2023 season or more than 7 rebounds per game in the 2025 season.
+
+Categories:
+A - Positive query on at least two joined tables
+F2 - NATURAL JOIN|JOIN USING
+H1 - Set unification - UNION
+
+RA:
+st_s1:= stats(points > 14 )[stats.id_season=season.id_season]season(year=2023)
+st_s2:= stats(rebounds > 7 )[stats.id_season=season.id_season]season(year=2025)
+p1:= person <person.id_person=st_s1.id_person]st_s1
+p2:= person <person.id_person=st_s2.id_person]st_s2
+p1 ∪ p2

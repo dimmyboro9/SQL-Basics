@@ -1,0 +1,9 @@
+Choose people, who had contracst as employees with league at the season, when the winner was team "Rome elephants".
+
+Categories:
+A - Positive query on at least two joined tables
+F2 - NATURAL JOIN|JOIN USING
+
+RA:
+c_s := contract(id_type=4)<contract.id_season=season.id_season]season(champion='Rome elephants')
+person<person.id_person=c_s.id_person]c_s
